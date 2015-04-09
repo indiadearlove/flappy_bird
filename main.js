@@ -22,6 +22,9 @@ var mainState = {
     this.pipes = game.add.group(); 
     this.pipes.enableBody = true; 
     this.pipes.createMultiple(20, 'pipe');
+
+    //timer
+    this.timer = game.time.events.loop(1500, this.addRowOfPipes, this);
   },
 
   update: function() {  
